@@ -9,7 +9,6 @@
     min-height: 100svh;
     padding: 80px;
     gap: 64px;
-    font-family: var(--font-geist-sans);
 
     .main {
       position: relative;
@@ -17,7 +16,7 @@
 
     .appTitle {
       font-family: "Leckerli One", cursive;
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: 400;
       font-style: normal;
       text-align: center;
@@ -37,7 +36,7 @@
       font-weight: 400;
       font-style: normal;
       margin: 15% 0;
-      font-size: 2.5em;
+      font-size: 2rem;
       max-width: 600px;
 
       .jokeSentence {
@@ -48,7 +47,7 @@
         input, select {
           font-family: "Delius", cursive;
           display: table-cell;
-          font-size: 2.5rem;
+          font-size: 2rem;
           color: rgb(171, 86, 100);
           background-color: transparent;
           outline: 0;
@@ -103,14 +102,13 @@
   }
 }
 
-
-.ant-select-dropdown {
-  font-size: 2.5rem;
-}
-
 @media (min-width: 600px) {
   .page {
+    .appTitle {
+      font-size: 4rem;
+    }
     .jokeFormWrapper {
+      font-size: 2.5rem;
       .jokeSentence {
         input {
           max-width: 340px;
@@ -118,14 +116,5 @@
       }
     }
     
-  }
-}
-
-@media (max-width: 600px) {
-  .page {
-    align-items: flex-start;
-    justify-items: center;
-    padding: 32px;
-    padding-bottom: 80px;
   }
 }
