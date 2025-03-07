@@ -1,0 +1,14 @@
+@mixin inputButton {
+    background: #d8f3b4;
+    display: block;
+    color: black;
+    border-radius: 40px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition:  all 0.5s ease-out;
+    box-shadow: 1px 1px 1px #000000;
+    
+    &:hover {
+    background-color:#99ea29;
+    }
+}

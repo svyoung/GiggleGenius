@@ -1,0 +1,66 @@
+@use "../styles/styles" as styles;
+@import url(/app/styles/_fonts.scss);
+
+.ant-modal {
+    .ant-modal-content {
+      background-color: #fde9e9;
+      font-size: 2rem;
+      font-family: "Delius", cursive;
+      padding: 4% 7%;
+    }
+
+    .modalButtons {
+        @include styles.inputButton;
+    }
+
+    .ant-modal-body {
+        padding: 30px 0;
+
+        .joke-content {
+            position: relative;
+            background-color: #fff;
+            border-radius: 30px;
+            padding: 5% 6%;
+            font-size: 2rem;
+            margin-bottom: 30px;
+
+            .quote {
+                font-size: 6rem;
+                fill: #aedfa3;
+                &.start-quote {
+                    position: absolute;
+                    top: -43px;
+                    left: -35px;                
+                    transform: scaleX(-1);
+                    z-index: 100;
+                }
+                &.start-quote-shadow {
+                    position: absolute;
+                    top: -37px;
+                    left: -31px;               
+                    transform: scaleX(-1);
+                    fill: black;
+                }
+                &.end-quote {
+                    position: absolute;
+                    bottom: -40px;
+                    right: -35px;
+                    z-index: 100;
+                }
+                &.end-quote-shadow {
+                    fill: black;
+                    position: absolute;
+                    bottom: -45px;
+                    right: -32px;
+                }
+            }
+        }
+    }
+
+    .ant-modal-footer {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+  }
+  

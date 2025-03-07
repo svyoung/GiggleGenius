@@ -1,0 +1,131 @@
+@use "./styles/styles" as styles;
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+@media (min-width: 300px) {
+  .page {
+    align-items: center;
+    justify-items: center;
+    min-height: 100svh;
+    padding: 80px;
+    gap: 64px;
+    font-family: var(--font-geist-sans);
+
+    .main {
+      position: relative;
+    }
+
+    .appTitle {
+      font-family: "Leckerli One", cursive;
+      font-size: 4rem;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center;
+      text-shadow: 2px 2px 1px #000000;
+    }
+    .description {
+      position: absolute;
+      top: 14%;
+      left: 40%;
+      font-weight: 100;
+      color: rgb(171, 86, 100);
+    }
+
+    .jokeFormWrapper {
+      font-family: "Delius", cursive;
+      text-shadow: 1px 1px 1px #6f6f6f;
+      font-weight: 400;
+      font-style: normal;
+      margin: 15% 0;
+      font-size: 2.5em;
+      max-width: 600px;
+
+      .jokeSentence {
+        display: table;
+        span {
+          display: table-cell;
+        }
+        input, select {
+          font-family: "Delius", cursive;
+          display: table-cell;
+          font-size: 2.5rem;
+          color: rgb(171, 86, 100);
+          background-color: transparent;
+          outline: 0;
+          border: 0;
+          border-bottom: 1px dashed rgba(255, 255, 255, 1);
+          margin: 0.6rem;
+          max-width: 150px;
+          
+          &::placeholder {
+            color: red;
+          }
+          &:hover::placeholder, &:focus::placeholder {
+            color: red;
+          }
+        }
+        .selectStyled {
+          min-width: 300px;
+          
+          :global {
+            .ant-select-selector {
+              background-color: transparent;
+              color: rgb(171, 86, 100);
+              font-size: 2rem;
+              padding: 1.5rem;
+              border: 0;
+              border-bottom: 0.5px solid rgba(0, 0, 0, 0.7);
+              border-radius: unset;
+            }
+            .ant-select-selection-wrap {
+              display: inline;
+            }
+            .ant-select-selection-item {
+              margin: 0;
+              display: block;
+            }
+            .ant-select-item-option-content {
+              font-size: 2.5rem;
+            }
+          }
+        }
+      } 
+      .submitButton {
+        @include styles.inputButton;
+        font-size: 2rem;
+        margin: 15% auto;
+      }
+    }
+
+    .modalContent {
+      
+    }
+  }
+}
+
+
+.ant-select-dropdown {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 600px) {
+  .page {
+    .jokeFormWrapper {
+      .jokeSentence {
+        input {
+          max-width: 340px;
+        }
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    align-items: flex-start;
+    justify-items: center;
+    padding: 32px;
+    padding-bottom: 80px;
+  }
+}
