@@ -1,6 +1,6 @@
 Leveraging OpenAI's library to build a generator to display AI powered jokes, utilizing NextJs's API route.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Demo: [https://gigglegenius.netlify.app/](https://gigglegenius.netlify.app/)
 
 ## Getting Started
 
