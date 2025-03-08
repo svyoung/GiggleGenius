@@ -27,8 +27,9 @@ export default function Home() {
 
   const getJokes = async () => {
     setLoading(true);
+    setOpenModal(true);
     try {
-      const fullPrompt = `Tell me ${prompt.jokeType || "" } joke about a ${prompt.jokeSubjects || ""} and keep it clean!`;
+      const fullPrompt = `Tell me ${prompt.jokeType || "funny" } joke about a ${prompt.jokeSubjects || "anything"} and keep it clean!`;
       const resp = await fetch("/api/openai", {method: "POST", headers: { "Content-Type" : "application/json" }, body: JSON.stringify({ prompt: fullPrompt }) })
       const reader = resp.body.getReader();
       const decoder = new TextDecoder();
@@ -39,7 +40,6 @@ export default function Home() {
         joke += decoder.decode(value, { stream: true });
         setJoke(joke);
       }
-      setOpenModal(true);
     } catch (e) {
       console.log(e);
     } finally {
